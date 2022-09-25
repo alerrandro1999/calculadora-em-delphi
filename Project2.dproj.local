@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/19 20:32:58.000.984,=C:\Users\alerr\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/09/19 20:36:01.000.511,=C:\Users\alerr\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/09/25 15:08:11.000.281,=C:\Users\alerr\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/09/25 15:15:06.000.621,C:\Users\alerr\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.dfm=C:\Delphi Projetos\calculadora\Unit2.dfm</Transaction>
+    <Transaction>2022/09/25 15:15:06.000.621,C:\Users\alerr\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas=C:\Delphi Projetos\calculadora\Unit2.pas</Transaction>
+    <Transaction>2022/09/25 15:15:16.000.929,C:\Users\alerr\OneDrive\Documentos\Embarcadero\Studio\Projects\Project2.dproj=C:\Delphi Projetos\calculadora\Project2.dproj</Transaction>
+    <Transaction>2022/09/25 15:15:27.000.103,=C:\Delphi Projetos\calculadora\Unit1.pas</Transaction>
+    <Transaction>2022/09/25 15:16:03.000.072,C:\Delphi Projetos\calculadora\Unit1.pas=C:\Delphi Projetos\calculadora\Classes\Classes.Calcular.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

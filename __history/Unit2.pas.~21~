@@ -1,0 +1,80 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TCalculadora = class(TForm)
+    edtvalor1: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    edtvalor2: TEdit;
+    Label3: TLabel;
+    edtresultado: TEdit;
+    btnsoma: TButton;
+    btnsubtrair: TButton;
+    btnmultiplicar: TButton;
+    btndividir: TButton;
+    procedure btnsomaClick(Sender: TObject);
+    procedure btnsubtrairClick(Sender: TObject);
+    procedure btndividirClick(Sender: TObject);
+    procedure btnmultiplicarClick(Sender: TObject);
+    procedure edtvalor1KeyPress(Sender: TObject; var Key: Char);
+  private
+    { Private declarations }
+    procedure Resultado(pResultado:string);
+  public
+    { Public declarations }
+  end;
+
+var
+  Calculadora: TCalculadora;
+
+implementation
+
+{$R *.dfm}
+
+uses Classes.Calcular;
+
+
+{ TCalculadora }
+
+procedure TCalculadora.btndividirClick(Sender: TObject);
+begin
+  if not ((edtvalor1.Text = EmptyStr) or (edtvalor2.Text = EmptyStr)) then
+  
+  TCalcula.Action.A(edtvalor1.Text).B(edtvalor2.Text).Divisao.Retorno(Resultado);
+end;
+
+procedure TCalculadora.btnmultiplicarClick(Sender: TObject);
+begin
+ TCalcula.Action.A(edtvalor1.Text).B(edtvalor2.Text).Multiplicacao.Retorno(Resultado);
+end;
+
+procedure TCalculadora.btnsomaClick(Sender: TObject);
+begin
+  TCalcula.Action.A(edtvalor1.Text).B(edtvalor2.Text).Adicao.Retorno(Resultado);
+end;
+
+procedure TCalculadora.btnsubtrairClick(Sender: TObject);
+begin
+ TCalcula.Action.A(edtvalor1.Text).B(edtvalor2.Text).Subtracao.Retorno(Resultado);
+end;
+
+procedure TCalculadora.edtvalor1KeyPress(Sender: TObject; var Key: Char);
+begin
+  if not(CharInSet(Key, [ '0' .. '9', ',', #8])) then
+    Key := #0;
+
+end;
+
+
+procedure TCalculadora.Resultado(pResultado: string);
+begin
+  edtresultado.Text := FormatFloat('0.################', StrToFloat(pResultado));
+end;
+
+end.
