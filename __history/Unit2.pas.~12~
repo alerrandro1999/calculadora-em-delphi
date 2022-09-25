@@ -1,0 +1,45 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TCalculadora = class(TForm)
+    edtvalor1: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    edtvalor2: TEdit;
+    Label3: TLabel;
+    edtresultado: TEdit;
+    btnsoma: TButton;
+    btnsubtrair: TButton;
+    btnmultiplicar: TButton;
+    btndividir: TButton;
+  private
+    { Private declarations }
+    procedure Resultado(pResultado:string);
+  public
+    { Public declarations }
+  end;
+
+var
+  Calculadora: TCalculadora;
+
+implementation
+
+{$R *.dfm}
+
+uses Classes.Calcular;
+
+
+{ TCalculadora }
+
+procedure TCalculadora.Resultado(pResultado: string);
+begin
+  edtresultado.Text := FormatFloat('0.################', StrToFloat(pResultado));
+end;
+
+end.

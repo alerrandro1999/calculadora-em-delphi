@@ -1,0 +1,27 @@
+unit Classes.Calcular;
+
+interface
+
+type
+
+ ICalcula = interface
+   ['{C9C3270C-C0B1-4BEA-992A-DE93568E2F0A}']
+   function Adicao: ICalcula;
+   function Subtracao: ICalcula;
+   function Multiplicacao: ICalcula;
+   function Divisao: ICalcula;
+   function A(pValor:string):ICalcula;
+   function B(pValor:string):ICalcula;
+ end;
+
+ TCalcula = class(TInterfacedObject, ICalcula)
+   private
+   public
+   constructor Create;
+   destructor Destroy; override;
+   class function Action: ICalcula;
+ end;
+
+implementation
+
+end.
